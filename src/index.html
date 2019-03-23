@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>组件demo</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>组件-demo</div>
+        <input-number v-model="value" :max="100" :min="-100" :step="3"></input-number>
+        <div>---------------</div>
+        <button @click="add">+</button>
+        <button @click="minus">-</button>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script type="text/javascript" src="../js/input-number.js"></script>
+    <script type="text/javascript">
+   
+    var app = new Vue({
+        el: '#app',
+        data: {
+            value: 6
+        },
+        components: {},
+        methods: {
+            add() {
+                console.log(this.value)
+                this.value++
+            },
+            minus() {
+                console.log(this.value)
+                this.value--
+            },
+
+        }
+    })
+    </script>
+</body>
+
+</html>
